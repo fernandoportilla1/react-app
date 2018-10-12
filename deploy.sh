@@ -17,7 +17,7 @@ SHA=`git rev-parse --verify HEAD`
 
 # Config git
 git config --global user.name "Travis CI"
-git config --global user.email "bot@rock-the-open-source.com"
+git config --global user.email "bot@react-app.com"
 git config --global push.default simple
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc

@@ -1,15 +1,14 @@
 language: node_js
 node_js:
   - "7"
-cache: yarn
+cache: npm
 install:
-  - yarn install
-  - yarn global add surge now
+  - npm install
 
 jobs:
   include:
     - stage: test
-      script: yarn test
+      script: npm run test
     - stage: publish
       script:
         - ./now_deploy.sh
@@ -18,7 +17,7 @@ deploy:
   - provider: surge
     skip_cleanup: true
     project: ./build/
-    domain: rock-the-open-source.surge.sh
+    domain: react-app.surge.sh
   - provider: pages
     local_dir: ./build/
     skip_cleanup: true
